@@ -3,33 +3,19 @@ from dataclasses import dataclass
 
 @dataclass
 class State:
-    _id: str
-    _Name: str
-    _Capital: str
-    _Lat: float
-    _Lng: float
-    _Area: float
-    _Population: int
-    _Neighbors: []
+    id:str
+    Name:str
+    Capital:str
+    Lat:float
+    Lng:float
+    Area:int
+    Population:int
+    Neighbors:str
 
-    @property
-    def id(self):
-        return self._id
 
-    @property
-    def lat(self):
-        return self._Lat
-
-    @property
-    def lng(self):
-        return self._Lng
-
-    @property
-    def name(self):
-        return self._Name
 
     def __str__(self):
-        return self._Name
+        return f"{self.Name}"
 
     def __hash__(self):
-        return hash(self._id)
+        return hash(self.id)

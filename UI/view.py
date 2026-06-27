@@ -29,11 +29,11 @@ class View(ft.UserControl):
         self._page.controls.append(self._title)
 
         # First row with some controls
-        self.ddyear = ft.Dropdown(label="Anno",
-                                  hint_text="Anno da analizzare per gli avvistamenti.")
+        self.ddyear = ft.Dropdown(label="Anno")
+        self._controller.fillDDyear()
 
-        self.ddshape = ft.Dropdown(label="Shape",
-                                   hint_text="Forma da analizzare per gli avvistamenti.")
+        self.ddshape = ft.Dropdown(label="Shape")
+
 
         self.btn_graph = ft.ElevatedButton(text="Crea Grafo",
                                            tooltip="Crea il grafo del punto 1",
